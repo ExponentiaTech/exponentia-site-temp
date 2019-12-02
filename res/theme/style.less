@@ -19,20 +19,24 @@ main {
 	justify-content: center;
 	height: 100%;
 	overflow: hidden;
-}
 
-h1 {
-	display: none;
-}
-
-p {
-	margin: 0 0 1vw;
-	color: #aaa;
-	font-weight: bold;
+	h1 {
+		display: none;
+	}
+	
+	p {
+		margin: 0 0 1vw;
+		color: #aaa;
+		font-weight: bold;
+	}
 }
 
 figure {
 	--s: 30vw;
+
+	@media (max-width: 800px) {
+		--s: 60vw;
+	}
 
 	--m: 1;
 	--w: calc(var(--s) * var(--m));
@@ -139,6 +143,20 @@ figure {
 				transform: rotate(-7deg);
 			}
 		}
+	}
+}
+
+footer {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #555;
+
+	a {
+		color: inherit;
 	}
 }
 
